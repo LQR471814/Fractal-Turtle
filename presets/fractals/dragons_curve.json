@@ -1,0 +1,9 @@
+{
+    "line":["F"],
+    "axiom":"FX",
+    "angle":90,
+    "rules":[
+        {"value":"X", "equation":"X+YF+"},
+        {"value":"Y", "equation":"-FX-Y"}
+    ]
+}

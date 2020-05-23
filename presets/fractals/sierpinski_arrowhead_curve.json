@@ -1,0 +1,9 @@
+{
+    "line":["A", "B"],
+    "axiom":"A",
+    "angle":60,
+    "rules":[
+        {"value":"A", "equation":"B-A-B"},
+        {"value":"B", "equation":"A+B+A"}
+    ]
+}

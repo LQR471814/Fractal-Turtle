@@ -1,0 +1,9 @@
+{
+    "line":["F", "G"],
+    "axiom":"F-G-G",
+    "angle":120,
+    "rules":[
+        {"value":"F", "equation":"F-G+F+G-F"},
+        {"value":"G", "equation":"GG"}
+    ]
+}

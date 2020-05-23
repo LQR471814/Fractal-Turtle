@@ -1,0 +1,9 @@
+{
+    "line":["F"],
+    "axiom":"X",
+    "angle":25,
+    "rules":[
+        {"value":"X", "equation":"F+[[X]-X]-F[-FX]+X"},
+        {"value":"F", "equation":"FF"}
+    ]
+}
