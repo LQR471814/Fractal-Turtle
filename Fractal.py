@@ -135,5 +135,5 @@ else:
         write_file(main, 'fractal.svg', size=(scaleH + "px", scaleV + "px"))
         print("Exported!")
     else:
-        write_file(main, 'fractal.svg', size=("1000px", "1000px"))
+        write_file(main, 'fractal.svg', size=("10000px", "10000px"))
         print("Exported!")
