@@ -1,9 +1,11 @@
-import turtle
-import json
 import argparse
-import svgwrite
-from SvgTurtle import SvgTurtle
+import json
 import time
+import turtle
+
+import svgwrite
+
+from SvgTurtle import SvgTurtle
 
 
 def write_file(draw_func, filename, size):
