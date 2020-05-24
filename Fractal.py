@@ -3,8 +3,6 @@ import json
 import time
 import turtle
 
-import svgwrite
-
 from SvgTurtle import SvgTurtle
 
 
@@ -36,6 +34,9 @@ parser.add_argument("-eV", "--export-scale-vertical", help="Ex. 720 px")
 parser.add_argument("-v", "--verbose", help="Ex. True")
 
 args = parser.parse_args()
+
+if str(args.export).lower() == "true":
+    import svgwrite
 
 f = open(args.settings, "r")
 options = json.loads(f.read())
