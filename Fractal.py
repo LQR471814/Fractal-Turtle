@@ -20,15 +20,18 @@ parser = argparse.ArgumentParser(description='Fractal Turtle v0.1.0')
 #? Required
 
 parser.add_argument("-s", "--settings", required=True, help="Ex. /path/to/your/fractal_settings.json")
-parser.add_argument("-l", "--length", required=True, help="Ex. 10 px")
-parser.add_argument("-i", "--iterations", required=True, help="Ex. 4")
+
+#? With Defaults
+
+parser.add_argument("-l", "--length", default="10", help="Ex. 10 px")
+parser.add_argument("-i", "--iterations", default="5", help="Ex. 4")
 
 #? Optional
 
-parser.add_argument("-v", "--verbose", help="Ex. True")
 parser.add_argument("-e", "--export", help="Ex. True")
 parser.add_argument("-eH", "--export-scale-horizontal", help="Ex. 1280 px")
 parser.add_argument("-eV", "--export-scale-vertical", help="Ex. 720 px")
+parser.add_argument("-v", "--verbose", help="Ex. True")
 
 args = parser.parse_args()
 
@@ -84,6 +87,8 @@ def render(lString):
 
 def fractal(lString, rules):
     global length
+    global iterations
+    global args
 
     constants = ["+", "-", "[", "]"]
 
@@ -98,6 +103,9 @@ def fractal(lString, rules):
                     newString += rule.equation
 
         lString = newString
+
+    if str(args.verbose).lower() == "true":
+        print("[DEBUG]", lString)
 
     render(lString)
 
@@ -114,6 +122,13 @@ length = float(args.length)
 axiom = options["axiom"]
 line = options["line"]
 iterations = int(args.iterations)
+
+if str(args.verbose).lower() == "true":
+    print("[DEBUG] Angle: " + str(angle))
+    print("[DEBUG] Length: " + str(length))
+    print("[DEBUG] Axiom: " + str(axiom))
+    print("[DEBUG] Line: " + str(line))
+    print("[DEBUG] Iterations: " + str(iterations))
 
 def main():
     rules = options["rules"]
