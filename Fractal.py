@@ -67,11 +67,6 @@ class state:
         turtle.setheading(self.rotation)
 
 def render(lString):
-    global angle
-    global length
-    global axiom
-    global line
-
     pendingLinks = []
     currentState = None
 
@@ -89,10 +84,6 @@ def render(lString):
             pendingLinks.pop(-1)
 
 def fractal(lString, rules):
-    global length
-    global iterations
-    global args
-
     constants = ["+", "-", "[", "]"]
 
     for i in range(iterations):
