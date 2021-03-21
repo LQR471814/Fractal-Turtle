@@ -26,7 +26,7 @@ Specify the horizontal scale of the .svg file (Yes this is a thing)
 
 #### `-eV | --export-scale-vertical Default: 10000`
 
-Specify the horizontal scale
+Specify the vertical scale
 
 ### **Optional**
 
